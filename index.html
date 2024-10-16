@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body class="tit-regular">
     <header>
         <!-- top part of header start here -->
         <div class="bg-primary md:grid lg:place-content-center hidden py-2 px-5 lg:px-0">
@@ -56,7 +56,7 @@
                 <div class="navbar-start">
                     <a href="#" class="flex items-center gap-2 w-full">
                         <img src="/assets/images/logo.png" height="60" width="60" alt="logo">
-                        <h1 class="text-black font-extrabold text-[24px] md:text-[36px]">One <span
+                        <h1 class="text-black tit-bold text-[24px] md:text-[36px]">One <span
                                 class="text-primary font-ext">Shop</span></h1>
                     </a>
                 </div>
@@ -210,7 +210,7 @@
                 </div>
                 <!-- slider owl carousel end here -->
             </section>
-    
+
             <section>
                 <!-- info section -->
                 <div class="grid grid-cols-12 gap-5 lg:gap-10 mt-5 px-5 lg:px-0 w-full">
@@ -248,7 +248,303 @@
                         </div>
                     </div>
                 </div>
-    
+            </section>
+
+            <section class="mt-5">
+                <!-- product section start here -->
+                <div>
+                    <div class="flex items-center justify-between mb-5 px-5 lg:px-0 w-full">
+                        <h1 class="text-[28px] md:text-[36px] font-semibold">Featured Products</h1>
+                        <div class="flex gap-2 items-center">
+                            <i
+                                class="ti ti-list-details cursor-pointer border rounded-md p-1 text-[22px] hover:bg-primary hover:text-white hover:transition-all"></i>
+                            <i
+                                class="ti ti-layout-grid cursor-pointer border rounded-md p-1 text-[22px] hover:bg-primary hover:text-white hover:transition-all"></i>
+                        </div>
+                    </div>
+
+                    <!-- Product toogle view here -->
+
+                    <!-- <div class="grid place-content-center my-5">
+                        ${loading
+                        ? `<div class='loading loading-bars bg-primary'></div>`
+                        : `<button onclick="loadMoreProducts()"
+                            class="btn btn-primary text-white rounded-full ${allProducts <= loadProducts ? 'hidden' : 'flex'}"
+                            type="button">
+                            Load More <i class="ti ti-arrow-down animate-bounce"></i>
+                        </button>`
+                        }
+                    </div> -->
+                </div>
+
+            </section>
+            <!-- product setion start here:grid -->
+            <section id="grid-products">
+                <div class="grid grid-cols-12 gap-5">
+                    <!-- single product grid pice -->
+                    <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                        <div class="card card-bordered awesome-shadow hover:scale-105 transition-all duration-500">
+                            <figure class="relative cursor-pointer">
+                                <img src="https://i.ibb.co/FJhBGJL/222.webp" alt="product image"
+                                    class="scale-100 transition-all duration-500" style="width: 100%; height: auto;"
+                                    loading="lazy" />
+                                <div
+                                    class="absolute top-5 left-0 bg-primary rounded-full rounded-s-none px-2 text-white text-[12px] md:text-[14px]">
+                                    Brand Name</div>
+                                <div
+                                    class="flex gap-2 absolute items-center bottom-4 right-4 bg-primary p-2 rounded-xl">
+                                    <div class="p-2 cursor-pointer">
+                                        <i class="ti ti-eye text-white" style="font-size: 20px;"></i>
+                                    </div>
+                                    <div class="text-white">|</div>
+                                    <div class="p-2">
+                                        <i class="ti ti-heart text-white" style="font-size: 20px;"></i>
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="card-body p-4 flex flex-col justify-between min-h-[175px]">
+                                <div class="card-title cursor-pointer">TP Link AC1200 Dual-Band Wi-Fi Router (Archer
+                                    C54)</div>
+                                <div>
+                                    <div class="flex gap-2 justify-between">
+                                        <div class="flex gap-2">
+                                            <p class="text-[14px] md:text-[18px]">Price:</p>
+                                            <div>
+                                                <p class="font-bold text-[14px] md:text-[18px]">1150
+                                                    <span>টাকা</span>
+                                                </p>
+                                                <s class="text-error">2300 <span>টাকা</span></s>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="flex gap-2 items-center"><i
+                                                    class="ti ti-star-filled text-yellow-400"
+                                                    style="font-size: 20px;"></i> 4.5</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p class="text-success">In-stock: <span class="font-bold">10</span></p>
+                                        <a href="#"
+                                            class="text-end cursor-pointer text-primary hover:underline">Internet
+                                            Accessories</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 mt-5 px-4 pb-4">
+                                <div class="join">
+                                    <div class="btn btn-primary btn-outline rounded-full btn-sm join-item">
+                                        <i class="ti ti-minus" style="font-size: 15px;"></i>
+                                    </div>
+                                    <input
+                                        class="input input-sm input-primary join-item w-full max-w-[50px] text-center"
+                                        type="text" name="quantity" id="quantity" value="1" />
+                                    <div class="btn btn-primary btn-outline rounded-full btn-sm join-item">
+                                        <i class="ti ti-plus" style="font-size: 15px;"></i>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm text-white btn-primary rounded-full">কার্টে রাখুন</button>
+                            </div>
+                            <a href="/checkout"
+                                class="btn btn-sm text-white btn-primary rounded-t-none rounded-xl">অর্ডার করুন</a>
+                        </div>
+                        <!-- Quick View Modal (content omitted) -->
+                    </div>
+                    <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                        <div class="card card-bordered awesome-shadow hover:scale-105 transition-all duration-500">
+                            <figure class="relative cursor-pointer">
+                                <img src="https://i.ibb.co/x53441F/222.jpg" alt="product image"
+                                    class="scale-100 transition-all duration-500" style="width: 100%; height: auto;"
+                                    loading="lazy" />
+                                <div
+                                    class="absolute top-5 left-0 bg-primary rounded-full rounded-s-none px-2 text-white text-[12px] md:text-[14px]">
+                                    Lenovo</div>
+                                <div
+                                    class="flex gap-2 absolute items-center bottom-4 right-4 bg-primary p-2 rounded-xl">
+                                    <div class="p-2 cursor-pointer">
+                                        <i class="ti ti-eye text-white" style="font-size: 20px;"></i>
+                                    </div>
+                                    <div class="text-white">|</div>
+                                    <div class="p-2">
+                                        <i class="ti ti-heart text-white" style="font-size: 20px;"></i>
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="card-body p-4 flex flex-col justify-between min-h-[175px]">
+                                <div class="card-title cursor-pointer">Lenovo Thinkpad Pro 2.0</div>
+                                <div>
+                                    <div class="flex gap-2 justify-between">
+                                        <div class="flex gap-2">
+                                            <p class="text-[14px] md:text-[18px]">Price:</p>
+                                            <div>
+                                                <p class="font-bold text-[14px] md:text-[18px]">22500
+                                                    <span>টাকা</span>
+                                                </p>
+                                                <s class="text-error">25000 <span>টাকা</span></s>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="flex gap-2 items-center"><i
+                                                    class="ti ti-star-filled text-yellow-400"
+                                                    style="font-size: 20px;"></i> 4.5</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p class="text-success">In-stock: <span class="font-bold">10</span></p>
+                                        <a href="#"
+                                            class="text-end cursor-pointer text-primary hover:underline">Computer</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 mt-5 px-4 pb-4">
+                                <div class="join">
+                                    <div class="btn btn-primary btn-outline rounded-full btn-sm join-item">
+                                        <i class="ti ti-minus" style="font-size: 15px;"></i>
+                                    </div>
+                                    <input
+                                        class="input input-sm input-primary join-item w-full max-w-[50px] text-center"
+                                        type="text" name="quantity" id="quantity" value="1" />
+                                    <div class="btn btn-primary btn-outline rounded-full btn-sm join-item">
+                                        <i class="ti ti-plus" style="font-size: 15px;"></i>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm text-white btn-primary rounded-full">কার্টে রাখুন</button>
+                            </div>
+                            <a href="#"
+                                class="btn btn-sm text-white btn-primary rounded-t-none rounded-xl">অর্ডার করুন</a>
+                        </div>
+                        <!-- Quick View Modal (content omitted) -->
+                    </div>
+                    <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                        <div class="card card-bordered awesome-shadow hover:scale-105 transition-all duration-500">
+                            <figure class="relative cursor-pointer">
+                                <img src="https://i.ibb.co/qYLyHR6/1212.webp" alt="product image"
+                                    class="scale-100 transition-all duration-500" style="width: 100%; height: auto;"
+                                    loading="lazy" />
+                                <div
+                                    class="absolute top-5 left-0 bg-primary rounded-full rounded-s-none px-2 text-white text-[12px] md:text-[14px]">
+                                    Adata</div>
+                                <div
+                                    class="flex gap-2 absolute items-center bottom-4 right-4 bg-primary p-2 rounded-xl">
+                                    <div class="p-2 cursor-pointer">
+                                        <i class="ti ti-eye text-white" style="font-size: 20px;"></i>
+                                    </div>
+                                    <div class="text-white">|</div>
+                                    <div class="p-2">
+                                        <i class="ti ti-heart text-white" style="font-size: 20px;"></i>
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="card-body p-4 flex flex-col justify-between min-h-[175px]">
+                                <div class="card-title cursor-pointer">Adata UV128/128GB Flashdrive</div>
+                                <div>
+                                    <div class="flex gap-2 justify-between">
+                                        <div class="flex gap-2">
+                                            <p class="text-[14px] md:text-[18px]">Price:</p>
+                                            <div>
+                                                <p class="font-bold text-[14px] md:text-[18px]">2850
+                                                    <span>টাকা</span>
+                                                </p>
+                                                <s class="text-error">2900 <span>টাকা</span></s>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="flex gap-2 items-center"><i
+                                                    class="ti ti-star-filled text-yellow-400"
+                                                    style="font-size: 20px;"></i> 4.5</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p class="text-success">In-stock: <span class="font-bold">10</span></p>
+                                        <a href="#"
+                                            class="text-end cursor-pointer text-primary hover:underline">Storage Accessories</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 mt-5 px-4 pb-4">
+                                <div class="join">
+                                    <div class="btn btn-primary btn-outline rounded-full btn-sm join-item">
+                                        <i class="ti ti-minus" style="font-size: 15px;"></i>
+                                    </div>
+                                    <input
+                                        class="input input-sm input-primary join-item w-full max-w-[50px] text-center"
+                                        type="text" name="quantity" id="quantity" value="1" />
+                                    <div class="btn btn-primary btn-outline rounded-full btn-sm join-item">
+                                        <i class="ti ti-plus" style="font-size: 15px;"></i>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm text-white btn-primary rounded-full">কার্টে রাখুন</button>
+                            </div>
+                            <a href="/checkout"
+                                class="btn btn-sm text-white btn-primary rounded-t-none rounded-xl">অর্ডার করুন</a>
+                        </div>
+                        <!-- Quick View Modal (content omitted) -->
+                    </div>
+                    <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                        <div class="card card-bordered awesome-shadow hover:scale-105 transition-all duration-500">
+                            <figure class="relative cursor-pointer">
+                                <img src="https://i.ibb.co/J5z8rn4/323.webp" alt="product image"
+                                    class="scale-100 transition-all duration-500" style="width: 100%; height: auto;"
+                                    loading="lazy" />
+                                <div
+                                    class="absolute top-5 left-0 bg-primary rounded-full rounded-s-none px-2 text-white text-[12px] md:text-[14px]">
+                                    Hikvision</div>
+                                <div
+                                    class="flex gap-2 absolute items-center bottom-4 right-4 bg-primary p-2 rounded-xl">
+                                    <div class="p-2 cursor-pointer">
+                                        <i class="ti ti-eye text-white" style="font-size: 20px;"></i>
+                                    </div>
+                                    <div class="text-white">|</div>
+                                    <div class="p-2">
+                                        <i class="ti ti-heart text-white" style="font-size: 20px;"></i>
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="card-body p-4 flex flex-col justify-between min-h-[175px]">
+                                <div class="card-title cursor-pointer">Hikvision 21 inch Color Monitor with HDMI Port</div>
+                                <div>
+                                    <div class="flex gap-2 justify-between">
+                                        <div class="flex gap-2">
+                                            <p class="text-[14px] md:text-[18px]">Price:</p>
+                                            <div>
+                                                <p class="font-bold text-[14px] md:text-[18px]">9500
+                                                    <span>টাকা</span>
+                                                </p>
+                                                <s class="text-error">10000 <span>টাকা</span></s>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="flex gap-2 items-center"><i
+                                                    class="ti ti-star-filled text-yellow-400"
+                                                    style="font-size: 20px;"></i> 4.5</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p class="text-success">In-stock: <span class="font-bold">20</span></p>
+                                        <a href="#"
+                                            class="text-end cursor-pointer text-primary hover:underline">Monitor</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 mt-5 px-4 pb-4">
+                                <div class="join">
+                                    <div class="btn btn-primary btn-outline rounded-full btn-sm join-item">
+                                        <i class="ti ti-minus" style="font-size: 15px;"></i>
+                                    </div>
+                                    <input
+                                        class="input input-sm input-primary join-item w-full max-w-[50px] text-center"
+                                        type="text" name="quantity" id="quantity" value="1" />
+                                    <div class="btn btn-primary btn-outline rounded-full btn-sm join-item">
+                                        <i class="ti ti-plus" style="font-size: 15px;"></i>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm text-white btn-primary rounded-full">কার্টে রাখুন</button>
+                            </div>
+                            <a href="/checkout"
+                                class="btn btn-sm text-white btn-primary rounded-t-none rounded-xl">অর্ডার করুন</a>
+                        </div>
+                        <!-- Quick View Modal (content omitted) -->
+                    </div>
+                </div>
             </section>
         </div>
     </main>
@@ -293,6 +589,8 @@
         });
     </script>
     <script src="assets/js/main.js"></script>
+    <!-- framer motion  -->
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@11.11.9/dist/framer-motion.min.js"></script>
 </body>
 
 </html>
