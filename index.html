@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CSS CDN -->
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <!-- Tabler Icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <!-- Google Fonts: Titillium Web -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400&display=swap" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- top part of header start here -->
+        <div class="bg-primary md:grid lg:place-content-center hidden py-2 px-5 lg:px-0">
+            <div class="flex justify-between items-center w-full lg:w-[1200px] xl:w-[1440px]">
+                <div class="flex gap-5">
+                    <a href='mailto:support@oneshop.com' class="flex items-center gap-2 text-white">
+                        <i class="ti ti-mail"></i>
+                        <p class='text-[14px] font-normal'>support@oneshop.com</p>
+                    </a>
+                    <a href='tel:+8801798930232' class="flex items-center gap-2 text-white">
+                        <i class="ti ti-phone"></i>
+                        <p class='text-[14px] font-normal'>+8801798930232</p>
+                    </a>
+                    <div class=""></div>
+                </div>
+                <div class="flex gap-3">
+                    <a class='text-white' href='https://facebook.com/absoftlab99'><i
+                            class="ti ti-brand-facebook"></i></a>
+                    <a class='text-white' href='#'><i class="ti ti-brand-x"></i></a>
+                    <a class='text-white' href='#'><i class="ti ti-brand-pinterest"></i></a>
+                    <a class='text-white' href='#'><i class="ti ti-brand-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- top part of header end here -->
+
+        <!-- main part of header start here -->
+        <div class="grid lg:place-content-center bg-secondry border-b-2 px-5 lg:px-0 w-full bg-white">
+            <div class="navbar w-full lg:w-[1200px] xl:w-[1440px] px-0">
+                <div class="navbar-start">
+                    <a href="#" class="flex items-center gap-2 w-full">
+                        <img src="/assets/images/logo.png" height="60" width="60" alt="logo">
+                        <h1 class="text-black font-extrabold text-[24px] md:text-[36px]">One <span
+                                class="text-primary font-ext">Shop</span></h1>
+                    </a>
+                </div>
+
+                <!-- Navbar center with category and search -->
+                <div class="navbar-center hidden lg:flex join relative">
+                    <select
+                        class="select select-bordered w-full lg:w-[200px] rounded-full join-item focus-visible:outline-none"
+                        name="category" id="category">
+                        <option>Homer</option>
+                        <option>Marge</option>
+                        <option>Bart</option>
+                        <option>Lisa</option>
+                        <option>Maggie</option>
+                    </select>
+
+                    <input type="text" placeholder="Search for products"
+                        class="focus-visible:outline-none input text-[14px] text-light input-bordered join-item w-full lg:w-[400px]"
+                        id="searchQuery" name="searchQuery" value="">
+                    <button class="border-2 btn btn-primary text-white join-item px-4 rounded-full" type="button">
+                        <i class="ti ti-search text-[22px]"></i>
+                    </button>
+                </div>
+                <div class="navbar-end gap-2 hidden md:flex items-center place-items-end">
+                    <label for="wishlist_drawer" class="btn btn-ghost">
+                        <i class="ti ti-heart-filled text-[22px]" style="color: #dc2626;"></i>
+                        <span class="text-white h-6 w-6 text-[14px] bg-primary rounded-full p-1">0</span>
+                    </label>
+                    <p class='text-neutral text-[18px]'>|</p>
+                    <label for="cart_drawer" class="btn btn-ghost">
+                        <i class="ti ti-shopping-bag text-[22px] text-black"></i>
+                        <span class="text-white h-6 w-6 text-[14px] bg-primary rounded-full p-1">0</span>
+                    </label>
+                </div>
+                <!-- mobile menu section lg:hidden -->
+                <div class="navbar-end lg:hidden">
+                    <div class="z-50">
+                        <div role="button" class="btn btn-ghost lg:hidden">
+                            <label for="my-drawer-4" class="drawer-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="drawer drawer-end">
+                            <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+                            <div class="drawer-content">
+                                <!-- Page content here -->
+                                <!-- <label for="my-drawer-4" class="drawer-button btn btn-primary">Open drawer</label> -->
+                            </div>
+                            <div class="drawer-side">
+                                <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+                                <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                                    <!-- Sidebar content here -->
+                                    <li><a>Sidebar Item 1</a></li>
+                                    <li><a>Sidebar Item 2</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main part of header end here -->
+
+        <!-- bottom part of header start here -->
+        <div class="md:grid lg:place-content-center border-b-2 z-10 px-5 lg:px-0 bg-white hidden">
+            <nav class="w-full lg:w-[1200px] xl:w-[1440px] grid grid-cols-12 items-center">
+                <div class="col-span-9 flex items-center justify-start gap-5 w-full">
+                    <div class="">
+                        <div class="dropdown dropdown-hover dropdown-bottom dropdown-end">
+                            <div class="btn text-white btn-primary rounded-full m-1">
+                                <i class="ti ti-menu-2 text-[22px]"></i>
+                                <span class="pe-5">Browse Categories</span>
+                                <i class="ti ti-chevron-down text-[22px]"></i>
+                            </div>
+                            <ul
+                                class="dropdown-content bg-primary menu rounded-box w-full text-white z-[10] p-2 shadow">
+                                <li><a href="#">Category 1</a></li>
+                                <li><a href="#">Category 2</a></li>
+                                <li><a href="#">Category 3</a></li>
+                                <li><a href="#">Category 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1">
+                            <li class="text-black active"><a href="#">Home</a></li>
+                            <li class="text-black"><a href="#">Internet Accessories</a></li>
+                            <li class="text-black"><a href="#">Camera</a></li>
+                            <li class="text-black"><a href="#">Computer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-span-3 flex items-center justify-end">
+                    <button
+                        class="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
+                        onclick="showModal()">
+                        <span
+                            class="absolute inset-0 w-full h-full bg-gradient-to-br from-warning via-purple-600 to-primary"></span>
+                        <span
+                            class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-primary rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+                        <span class="relative text-white">Secret Deal</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Secret Deal Modal -->
+        <div id="secret-deal-modal"
+            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-[50]">
+            <div class="bg-white p-5 rounded-lg shadow-lg w-1/3">
+                <h2 class="text-2xl font-bold mb-4">Secret Deal</h2>
+                <p>This is the secret deal content. Enjoy the offer!</p>
+                <button class="btn btn-primary mt-4" onclick="hideModal()">
+                    Close
+                </button>
+            </div>
+        </div>
+
+        <!-- JavaScript to control the modal -->
+        <script>
+            function showModal() {
+                document.getElementById('secret-deal-modal').classList.remove('hidden');
+            }
+
+            function hideModal() {
+                document.getElementById('secret-deal-modal').classList.add('hidden');
+            }
+        </script>
+        <!-- bottom part of header end here -->
+    </header>
+    <main class="px-4 lg:px-0 grid place-content-center">
+        <div class="w-full lg:w-[1200px] xl:w-[1440px]">
+            <section>
+                <!-- slider owl carousel start here -->
+                <!-- Set up your HTML -->
+                <div class="grid place-content-center">
+                    <div
+                        class="owl-carousel owl-theme rounded-lg mt-3 md:mt-5 overflow-hidden w-full lg:w-[1200px] xl:w-[1440px]">
+                        <img src="/assets/images/slider1.webp" alt="slide 1">
+                        <img src="/assets/images/slider2.webp" alt="slide 2">
+                        <img src="/assets/images/slider3.webp" alt="slide 3">
+                        <img src="/assets/images/slider4.webp" alt="slide 4">
+                        <img src="/assets/images/slider5.webp" alt="slide 5">
+                    </div>
+                </div>
+                <!-- slider owl carousel end here -->
+            </section>
+    
+            <section>
+                <!-- info section -->
+                <div class="grid grid-cols-12 gap-5 lg:gap-10 mt-5 px-5 lg:px-0 w-full">
+                    <div
+                        class="col-span-6 rounded-xl lg:col-span-3 awesome-shadow hover:scale-110 duration-500 transition-all">
+                        <div
+                            class="bg-primary rounded-xl flex flex-col items-center justify-center py-3 md:py-5 relative overflow-hidden">
+                            <i class="ti ti-truck text-white" style="stroke-width: 1; font-size: 50px;"></i>
+                            <p class="text-white text-[14px] md:text-[20px] font-bold">Fast Delivery</p>
+                            <p class="text-[9px] md:text-[14px] text-white">Experience Lightning-Fast Delivery</p>
+                        </div>
+                    </div>
+                    <div
+                        class="col-span-6 rounded-xl lg:col-span-3 awesome-shadow hover:scale-110 duration-500 transition-all">
+                        <div class="bg-primary rounded-xl flex flex-col items-center justify-center py-3 md:py-5">
+                            <i class="ti ti-credit-card text-white" style="stroke-width: 1; font-size: 50px;"></i>
+                            <p class="text-white text-[14px] md:text-[20px] font-bold">Secured Payment</p>
+                            <p class="text-[9px] md:text-[14px] text-white">Shop with Confidence</p>
+                        </div>
+                    </div>
+                    <div
+                        class="col-span-6 rounded-xl lg:col-span-3 awesome-shadow hover:scale-110 duration-500 transition-all">
+                        <div class="bg-primary rounded-xl flex flex-col items-center justify-center py-3 md:py-5">
+                            <i class="ti ti-refresh text-white" style="stroke-width: 1; font-size: 50px;"></i>
+                            <p class="text-white text-[14px] md:text-[20px] font-bold">Replacement</p>
+                            <p class="text-[9px] md:text-[14px] text-white">1 Week free replacement guarantee</p>
+                        </div>
+                    </div>
+                    <div
+                        class="col-span-6 rounded-xl lg:col-span-3 awesome-shadow hover:scale-110 duration-500 transition-all">
+                        <div class="bg-primary rounded-xl flex flex-col items-center justify-center py-3 md:py-5">
+                            <i class="ti ti-help text-white" style="stroke-width: 1; font-size: 50px;"></i>
+                            <p class="text-white text-[14px] md:text-[20px] font-bold">24/7 Support</p>
+                            <p class="text-[9px] md:text-[14px] text-white">Always Here for You</p>
+                        </div>
+                    </div>
+                </div>
+    
+            </section>
+        </div>
+    </main>
+
+    <!-- Tailwind Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/lib.min.js"
+        integrity="sha512-eCwqHqUKmQxy8rFjKyhZ9aD7W0zT4GIO1I4r/UkKl1/gFGmOwB5hBcMhydlALwpHy2nHtRVzQn5jhrf8Hfzc/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jQuery Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Custom Script -->
+    <!-- jQuery (required by Owl Carousel) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true, // Infinite looping
+                autoplay: true, // Auto slide
+                autoplayTimeout: 5000, // Slide every 3 seconds
+                mouseDrag: true,
+                dots: false,
+                touchDrag: true,
+                smartSpeed: 1500, // Transition duration set to 1000 milliseconds (1 second)
+                slideTransition: 'ease-in-out',
+                responsive: { // Responsive settings
+                    0: {
+                        items: 1 // 1 item for small screens
+                    },
+                    600: {
+                        items: 1 // 2 items for medium screens
+                    },
+                    1000: {
+                        items: 1 // 3 items for large screens
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
