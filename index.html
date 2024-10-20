@@ -256,9 +256,9 @@
                     <div class="flex items-center justify-between mb-5 px-5 lg:px-0 w-full">
                         <h1 class="text-[28px] md:text-[36px] font-semibold">Featured Products</h1>
                         <div class="flex gap-2 items-center">
-                            <i
+                            <i id="list_btn" onclick="product_view = false;"
                                 class="ti ti-list-details cursor-pointer border rounded-md p-1 text-[22px] hover:bg-primary hover:text-white hover:transition-all"></i>
-                            <i
+                            <i id="grid_btn"
                                 class="ti ti-layout-grid cursor-pointer border rounded-md p-1 text-[22px] hover:bg-primary hover:text-white hover:transition-all"></i>
                         </div>
                     </div>
@@ -279,7 +279,7 @@
 
             </section>
             <!-- product setion start here:grid -->
-            <section id="grid-products">
+            <section id="grid_products" style="display: block;">
                 <div class="grid grid-cols-12 gap-5">
                     <!-- single product grid pice -->
                     <div class="col-span-12 md:col-span-4 lg:col-span-3">
@@ -409,8 +409,8 @@
                                 </div>
                                 <button class="btn btn-sm text-white btn-primary rounded-full">কার্টে রাখুন</button>
                             </div>
-                            <a href="#"
-                                class="btn btn-sm text-white btn-primary rounded-t-none rounded-xl">অর্ডার করুন</a>
+                            <a href="#" class="btn btn-sm text-white btn-primary rounded-t-none rounded-xl">অর্ডার
+                                করুন</a>
                         </div>
                         <!-- Quick View Modal (content omitted) -->
                     </div>
@@ -455,8 +455,8 @@
                                     </div>
                                     <div class="flex justify-between">
                                         <p class="text-success">In-stock: <span class="font-bold">10</span></p>
-                                        <a href="#"
-                                            class="text-end cursor-pointer text-primary hover:underline">Storage Accessories</a>
+                                        <a href="#" class="text-end cursor-pointer text-primary hover:underline">Storage
+                                            Accessories</a>
                                     </div>
                                 </div>
                             </div>
@@ -500,7 +500,8 @@
                                 </div>
                             </figure>
                             <div class="card-body p-4 flex flex-col justify-between min-h-[175px]">
-                                <div class="card-title cursor-pointer">Hikvision 21 inch Color Monitor with HDMI Port</div>
+                                <div class="card-title cursor-pointer">Hikvision 21 inch Color Monitor with HDMI Port
+                                </div>
                                 <div>
                                     <div class="flex gap-2 justify-between">
                                         <div class="flex gap-2">
@@ -546,20 +547,67 @@
                     </div>
                 </div>
             </section>
+            <section id="list_products" class="" style="display:none;">
+                <div
+                    class="flex border awesome-shadow rounded-xl mb-5 w-full overflow-hidden hover:scale-105 transition-all duration-500">
+                    <figure class="relative hidden md:flex cursor-pointer">
+                        <img class="w-full h-full" src="https://i.ibb.co/FJhBGJL/222.webp" alt="product image"
+                            style="width: 100%; height: 105px;">
+                        <div
+                            class="absolute top-5 left-0 bg-primary rounded-full rounded-s-none px-2 text-white text-[12px] md:text-[14px]">
+                            Brand Name</div>
+                    </figure>
+                    <div class="card-body p-2">
+                        <div class="grid grid-cols-12 justify-between">
+                            <div class="col-span-12 md:col-span-7">
+                                <div class="card-title">TP Link AC1200 Dual-Band Wi-Fi Router (Archer C54)</div>
+                                <div class="flex gap-10 mt-2">
+                                    <div>
+                                        <p class="text-[14px] md:text-[18px]">Price: <span class="font-bold">500
+                                                টাকা</span></p>
+                                        <s class="text-error">1000 টাকা</s>
+                                    </div>
+                                    <div>
+                                        <p class="text-success">In-stock: <span class="font-bold">50</span></p>
+                                        <a href="/product-category"
+                                            class="text-start text-primary hover:underline">Category Name</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-12 md:col-span-5 flex justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="join">
+                                        <div class="btn btn-primary btn-outline rounded-full btn-sm join-item">-</div>
+                                        <input
+                                            class="focus-visible:outline-none input input-sm input-primary join-item w-full max-w-[50px] text-center"
+                                            type="text" name="quantity" id="quantity" value="1">
+                                        <div class="btn btn-primary btn-outline rounded-full btn-sm join-item">+</div>
+                                    </div>
+                                    <button class="btn btn-sm text-white btn-primary rounded-full">কার্টে রাখুন</button>
+                                    <a href="#" class="btn btn-sm text-white btn-primary rounded-full">অর্ডার
+                                        করুন</a>
+                                </div>
+                                <div class="h-full md:flex items-center hidden">
+                                    <div class="flex flex-col items-center justify-center gap-2">
+                                        <div class="bg-primary rounded-full p-2"><i class="ti ti-eye text-white"
+                                                size="16"></i></div>
+                                        <div class="bg-primary rounded-full p-2"><i class="ti ti-heart text-white"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </div>
     </main>
 
     <!-- Tailwind Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/lib.min.js"
-        integrity="sha512-eCwqHqUKmQxy8rFjKyhZ9aD7W0zT4GIO1I4r/UkKl1/gFGmOwB5hBcMhydlALwpHy2nHtRVzQn5jhrf8Hfzc/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- jQuery Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Custom Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- jQuery (required by Owl Carousel) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -589,8 +637,6 @@
         });
     </script>
     <script src="assets/js/main.js"></script>
-    <!-- framer motion  -->
-    <script src="https://cdn.jsdelivr.net/npm/framer-motion@11.11.9/dist/framer-motion.min.js"></script>
 </body>
 
 </html>
